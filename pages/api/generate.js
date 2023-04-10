@@ -18,6 +18,7 @@ const bufferToBase64 = (buffer) => {
         headers: {
           Authorization: `Bearer ${process.env.HF_AUTH_KEY}`,
           'Content-Type': 'application/json',
+          'x-use-cache': 'false'
         },
         method: 'POST',
         body: JSON.stringify({
